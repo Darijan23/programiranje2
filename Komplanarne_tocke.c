@@ -42,7 +42,7 @@ int check_coplanarity(point p[], int n) {
 
   // Napisati dio koda za provjeru komplanarnosti
   int uvjet = 1;
-  for (int i = 2; i < n; ++i) {
+  for (int i = 3; i < n; ++i) {
     if (pl.A * p[i].x + pl.B * p[i].y + pl.C * p[i].z + pl.D) {
       uvjet = 0;
       break;

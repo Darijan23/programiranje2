@@ -49,7 +49,7 @@ int main() {
 	l &= mask;
 
 	for (i = 1; i < k % n; i++) {
-		if ((i % n) <= (n / 2)) {
+		if (i <= (n / 2)) {
 			l <<= 1;
 			l |= 1;
 			l &= mask;

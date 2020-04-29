@@ -56,7 +56,7 @@ int main() {
 			len++;
 		}
 	}
-	len--;
+	//len--;
 
 	for (int i = 0; i < 256; ++i) {
 		znakovi[i].uc = ((float)znakovi[i].pon / (float)len) * 100.0;

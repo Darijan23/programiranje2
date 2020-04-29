@@ -6,7 +6,7 @@
 #endif
 
 void print_binary(uint32_t l, int n) {
-	uint32_t p = (1 << (n-1));
+	uint32_t p = (1 << (n - 1));
 
 	while(p != 0) {
 		printf("%d", l & p ? 1 : 0);
@@ -49,7 +49,7 @@ int main() {
 	l &= mask;
 
 	for (i = 1; i < k % n; i++) {
-		if (i <= (n / 2)) {
+		if (i <= (n >> 1)) {
 			l <<= 1;
 			l |= 1;
 			l &= mask;
@@ -59,8 +59,8 @@ int main() {
 		}
 	}
 
-	print_binary(l, n/2);
-	print_binary(reverse_binary(l, n/2), n/2);
+	print_binary(l, n >> 1);
+	print_binary(reverse_binary(l, n >> 1), n >> 1);
 
 	return 0;
 }

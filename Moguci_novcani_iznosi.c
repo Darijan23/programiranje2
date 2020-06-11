@@ -16,6 +16,7 @@ int vibecheck(int val, int n, int m, int *v, int *pos) {
 
 	for (int i = 0; i < n; i++) {
 		vals += vibecheck(val + *(v + i), n, m, v, pos);
+		printf("%d\n", vals);
 	}
 
 	return vals;
